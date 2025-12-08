@@ -1,18 +1,52 @@
+/* Columns Badge - First Business Bank styling */
 .columns-badge > div {
   display: flex;
   flex-direction: column;
+  gap: var(--spacer-5);
+  max-width: var(--ds-spacing-container-max-width);
+  margin: 0 auto;
+  text-align: center;
 }
 
 .columns-badge img {
   width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .columns-badge > div > div {
   order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.columns-badge > div > div h2,
+.columns-badge > div > div h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacer-3);
+  color: var(--ds-color-text-heading);
+}
+
+.columns-badge > div > div p {
+  line-height: 1.6;
+  margin-bottom: var(--spacer-4);
+  color: var(--ds-color-text-body);
+  max-width: 600px;
+}
+
+.columns-badge > div > div .button-container {
+  margin-top: var(--spacer-4);
 }
 
 .columns-badge > div > .columns-badge-img-col {
   order: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacer-4);
 }
 
 .columns-badge > div > .columns-badge-img-col img {
@@ -22,12 +56,38 @@
 @media (width >= 900px) {
   .columns-badge > div {
     align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: row;
+    gap: var(--spacer-6);
+    text-align: left;
   }
 
   .columns-badge > div > div {
-    flex: 1;
+    flex: 2;
     order: unset;
+    align-items: flex-start;
+  }
+
+  .columns-badge > div > .columns-badge-img-col {
+    flex: 1;
+    padding: var(--spacer-5);
+  }
+
+  .columns-badge img {
+    max-width: 250px;
+  }
+}
+
+@media (width <= 544px) {
+  .columns-badge > div {
+    gap: var(--spacer-4);
+  }
+
+  .columns-badge > div > div h2 {
+    font-size: var(--ds-typography-sizes-h-2-mobile-size);
+    line-height: var(--ds-typography-sizes-h-2-mobile-line-height);
+  }
+
+  .columns-badge img {
+    max-width: 150px;
   }
 }

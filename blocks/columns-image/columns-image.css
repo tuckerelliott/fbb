@@ -1,18 +1,45 @@
+/* Columns Image - First Business Bank styling */
 .columns-image > div {
   display: flex;
   flex-direction: column;
+  gap: var(--spacer-5);
+  max-width: var(--ds-spacing-container-max-width);
+  margin: 0 auto;
 }
 
 .columns-image img {
   width: 100%;
+  border-radius: var(--ds-border-radius);
+  box-shadow: var(--ds-shadow);
 }
 
 .columns-image > div > div {
   order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.columns-image > div > div h2,
+.columns-image > div > div h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacer-3);
+  color: var(--ds-color-text-heading);
+}
+
+.columns-image > div > div p {
+  line-height: 1.6;
+  margin-bottom: var(--spacer-4);
+  color: var(--ds-color-text-body);
+}
+
+.columns-image > div > div .button-container {
+  margin-top: var(--spacer-4);
 }
 
 .columns-image > div > .columns-image-img-col {
   order: 0;
+  line-height: 0;
 }
 
 .columns-image > div > .columns-image-img-col img {
@@ -22,12 +49,27 @@
 @media (width >= 900px) {
   .columns-image > div {
     align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: row;
+    gap: var(--spacer-6);
   }
 
   .columns-image > div > div {
     flex: 1;
     order: unset;
+  }
+
+  .columns-image > div > .columns-image-img-col {
+    flex: 1;
+  }
+}
+
+@media (width <= 544px) {
+  .columns-image > div {
+    gap: var(--spacer-4);
+  }
+
+  .columns-image > div > div h2 {
+    font-size: var(--ds-typography-sizes-h-2-mobile-size);
+    line-height: var(--ds-typography-sizes-h-2-mobile-line-height);
   }
 }

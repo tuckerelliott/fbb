@@ -1,27 +1,98 @@
+/* Cards Article - First Business Bank styling */
 .cards-article > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--ds-spacing-grid-gap);
+  max-width: var(--ds-spacing-container-max-width);
+  margin: 0 auto;
 }
 
 .cards-article > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  background-color: #fefefe;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmZWZlZmUiLz48L3N2Zz4=');
+  background-position: -1px bottom;
+  background-repeat: no-repeat;
+  background-size: calc(100% + 2px);
+  box-shadow: var(--ds-shadow);
+  border-radius: var(--ds-border-radius);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform var(--animation-speed-fast) ease;
 }
 
-.cards-article .cards-article-card-body {
-  margin: 16px;
+.cards-article > ul > li:hover {
+  transform: translateY(-4px);
 }
 
 .cards-article .cards-article-card-image {
   line-height: 0;
+  height: 200px;
+  overflow: hidden;
 }
 
-.cards-article > ul > li img {
+.cards-article .cards-article-card-image img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
+  transition: transform var(--animation-speed-normal) ease;
+}
+
+.cards-article > ul > li:hover .cards-article-card-image img {
+  transform: scale(1.05);
+}
+
+.cards-article .cards-article-card-body {
+  margin: 0;
+  padding: var(--spacer-6) var(--spacer-3) var(--spacer-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cards-article .cards-article-card-body h2,
+.cards-article .cards-article-card-body h3 {
+  font-size: var(--ds-typography-sizes-h-4-size);
+  line-height: var(--ds-typography-sizes-h-4-line-height);
+  margin-top: 0;
+  margin-bottom: var(--spacer-3);
+  color: var(--ds-color-text-heading);
+  min-height: 5.5rem;
+}
+
+.cards-article .cards-article-card-body p {
+  line-height: 1.5;
+  margin-bottom: var(--spacer-4);
+  flex: 1;
+}
+
+.cards-article .cards-article-card-body .button-container {
+  margin-top: auto;
+  padding-top: var(--spacer-3);
+}
+
+.cards-article .cards-article-card-body a.button {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (width <= 900px) {
+  .cards-article > ul {
+    grid-template-columns: 1fr;
+    gap: var(--spacer-4);
+  }
+}
+
+@media (width <= 544px) {
+  .cards-article .cards-article-card-body {
+    padding: var(--spacer-4) var(--spacer-2);
+  }
+
+  .cards-article .cards-article-card-image {
+    height: 180px;
+  }
 }
