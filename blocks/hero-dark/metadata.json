@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-dark",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2025-12-08T15:14:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://firstbusiness.bank",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "purpose": "homepage-hero",
+    "imagePattern": "background"
+  },
+  "contentPattern": {
+    "structure": "heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "dark hero sections",
+      "full-width banners with background images",
+      "homepage hero areas"
+    ],
+    "notSuitableFor": [
+      "light-themed heroes",
+      "heroes without background images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index", "/content/index"],
+    "reuseCount": 2,
+    "lastUsed": "2025-12-08T16:07:00.000Z"
+  }
+}

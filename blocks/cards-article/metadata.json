@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2025-12-08T15:14:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://firstbusiness.bank",
+    "originPage": "homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "article-listing",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + description + link",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "blog post listings",
+      "article cards",
+      "news items",
+      "resource libraries"
+    ],
+    "notSuitableFor": [
+      "icon-based features",
+      "service cards without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index", "/content/index"],
+    "reuseCount": 2,
+    "lastUsed": "2025-12-08T16:07:00.000Z"
+  }
+}

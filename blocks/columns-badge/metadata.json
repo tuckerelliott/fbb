@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-badge",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2025-12-08T15:14:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://firstbusiness.bank",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "colored",
+    "density": "compact",
+    "purpose": "award-display",
+    "imagePattern": "badge"
+  },
+  "contentPattern": {
+    "structure": "text + badge-image",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "award sections",
+      "certification displays",
+      "badge showcases"
+    ],
+    "notSuitableFor": [
+      "general two-column layouts",
+      "photo-heavy content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2025-12-08T15:14:00.000Z"
+  }
+}
