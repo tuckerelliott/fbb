@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2025-12-08T15:14:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://firstbusiness.bank",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "service-cards",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + heading + description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "service offerings",
+      "feature lists with icons",
+      "benefit showcases"
+    ],
+    "notSuitableFor": [
+      "article listings",
+      "product catalogs with photos"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index", "/content/index"],
+    "reuseCount": 2,
+    "lastUsed": "2025-12-08T16:07:00.000Z"
+  }
+}

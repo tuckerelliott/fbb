@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-testimonial",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2025-12-08T15:14:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://firstbusiness.bank",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "colored",
+    "density": "spacious",
+    "purpose": "testimonial",
+    "imagePattern": "portrait"
+  },
+  "contentPattern": {
+    "structure": "photo + quote + attribution + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "testimonial sections",
+      "customer quotes with photos",
+      "team member spotlights"
+    ],
+    "notSuitableFor": [
+      "general image-text layouts",
+      "product features"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2025-12-08T15:14:00.000Z"
+  }
+}

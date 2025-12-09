@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-image",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2025-12-08T15:14:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://firstbusiness.bank",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "content-with-image",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "text + image OR image + text",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "content sections with supporting images",
+      "app screenshots",
+      "product features with visuals"
+    ],
+    "notSuitableFor": [
+      "text-only columns",
+      "testimonials with person photos"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2025-12-08T15:14:00.000Z"
+  }
+}

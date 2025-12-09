@@ -1,0 +1,107 @@
+/* Columns Testimonial - First Business Bank styling */
+.columns-testimonial > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-5);
+  max-width: var(--ds-spacing-container-max-width);
+  margin: 0 auto;
+  padding: var(--spacer-6) var(--spacer-4);
+  background-color: #f8f8f8;
+  border-radius: var(--ds-border-radius);
+  border-left: 4px solid var(--ds-color-primary);
+}
+
+.columns-testimonial img {
+  width: 100%;
+  border-radius: 50%;
+  max-width: 150px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin: 0 auto;
+  box-shadow: var(--ds-shadow);
+}
+
+.columns-testimonial > div > div {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.columns-testimonial > div > div h2,
+.columns-testimonial > div > div h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacer-2);
+  color: var(--ds-color-text-heading);
+  font-size: var(--ds-typography-sizes-h-4-size);
+  line-height: var(--ds-typography-sizes-h-4-line-height);
+}
+
+.columns-testimonial > div > div p {
+  line-height: 1.6;
+  margin-bottom: var(--spacer-3);
+  color: var(--ds-color-text-body);
+  font-style: italic;
+}
+
+.columns-testimonial > div > div p:last-of-type {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--ds-color-text-muted);
+  margin-bottom: 0;
+}
+
+.columns-testimonial > div > div .button-container {
+  margin-top: var(--spacer-4);
+}
+
+.columns-testimonial > div > .columns-testimonial-img-col {
+  order: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columns-testimonial > div > .columns-testimonial-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-testimonial > div {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--spacer-6);
+    padding: var(--spacer-6);
+  }
+
+  .columns-testimonial > div > div {
+    flex: 3;
+    order: unset;
+  }
+
+  .columns-testimonial > div > .columns-testimonial-img-col {
+    flex: 1;
+  }
+
+  .columns-testimonial img {
+    max-width: 180px;
+  }
+}
+
+@media (width <= 544px) {
+  .columns-testimonial > div {
+    gap: var(--spacer-4);
+    padding: var(--spacer-4) var(--spacer-3);
+  }
+
+  .columns-testimonial > div > div h2,
+  .columns-testimonial > div > div h3 {
+    font-size: var(--ds-typography-sizes-h-4-mobile-size);
+    line-height: var(--ds-typography-sizes-h-4-mobile-line-height);
+  }
+
+  .columns-testimonial img {
+    max-width: 120px;
+  }
+}

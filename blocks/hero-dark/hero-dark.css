@@ -1,0 +1,102 @@
+/* Hero Dark - First Business Bank styling */
+.hero-dark-container .hero-dark-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-dark {
+  position: relative;
+  padding: 120px var(--spacer-4);
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--ds-color-gradients-plum);
+  overflow: hidden;
+}
+
+.hero-dark > div {
+  position: relative;
+  z-index: 2;
+  max-width: var(--ds-spacing-container-max-width);
+  margin: 0 auto;
+}
+
+.hero-dark h1,
+.hero-dark h2,
+.hero-dark h3,
+.hero-dark h4,
+.hero-dark h5,
+.hero-dark h6 {
+  color: var(--ds-color-text-white);
+  margin-bottom: var(--spacer-4);
+  text-transform: none;
+}
+
+.hero-dark p {
+  color: var(--ds-color-text-white);
+  font-size: 1.25rem;
+  line-height: 1.75;
+  margin-bottom: var(--spacer-5);
+}
+
+.hero-dark .button-container {
+  margin-top: var(--spacer-5);
+}
+
+.hero-dark a.button {
+  background-color: var(--ds-color-primary);
+  color: var(--ds-button-color-primary-foreground);
+  margin: 0;
+}
+
+.hero-dark a.button:hover {
+  background-color: var(--ds-color-primary-light);
+}
+
+/* Background image */
+.hero-dark picture {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  object-fit: cover;
+}
+
+.hero-dark picture::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+.hero-dark img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* No image variant */
+.hero-dark.no-image {
+  background: var(--ds-color-gradients-plum);
+}
+
+@media (width >= 900px) {
+  .hero-dark {
+    padding: 160px var(--spacer-6);
+    min-height: 600px;
+  }
+}
+
+@media (width <= 544px) {
+  .hero-dark {
+    padding: 80px var(--spacer-3);
+    min-height: 400px;
+  }
+
+  .hero-dark h1 {
+    font-size: var(--ds-typography-sizes-h-1-mobile-size);
+    line-height: var(--ds-typography-sizes-h-1-mobile-line-height);
+  }
+}
