@@ -39,10 +39,11 @@
   min-height: 80px;
 }
 
-.cards-icon .cards-icon-card-image img {
+.cards-icon img {
   width: 60px;
   height: 60px;
   object-fit: contain;
+  max-width: unset;
 }
 
 .cards-icon .cards-icon-card-body {
