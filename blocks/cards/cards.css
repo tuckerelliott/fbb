@@ -1,74 +1,172 @@
+/* Cards - First Business Bank styling */
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
-  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacer-4);
+  max-width: var(--ds-spacing-container-max-width);
+  margin: 0 auto;
 }
 
 .cards > ul > li {
-  border: 1px solid var(--dark-color);
-  background-color: var(--background-color);
+  background-color: #fff;
+  box-shadow: var(--ds-shadow);
+  border-radius: var(--ds-border-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--animation-speed-fast) ease, box-shadow var(--animation-speed-fast) ease;
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+.cards > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .cards .cards-card-image {
   line-height: 0;
+  height: 240px;
+  overflow: hidden;
+  background-color: var(--ds-color-neutral-200);
+}
+
+.cards > ul > li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--animation-speed-normal) ease;
+}
+
+.cards > ul > li:hover img {
+  transform: scale(1.05);
+}
+
+.cards .cards-card-body {
+  padding: var(--spacer-4);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .cards .cards-card-body > *:first-child {
   margin-top: 0;
 }
 
-.cards > ul > li img {
+.cards .cards-card-body h2,
+.cards .cards-card-body h3 {
+  font-size: var(--ds-typography-sizes-h-4-size);
+  line-height: var(--ds-typography-sizes-h-4-line-height);
+  margin-bottom: var(--spacer-3);
+  color: var(--ds-color-text-heading);
+}
+
+.cards .cards-card-body p {
+  line-height: 1.6;
+  margin-bottom: var(--spacer-3);
+  color: var(--ds-color-text-body);
+  flex: 1;
+}
+
+.cards .cards-card-body .button-container {
+  margin-top: auto;
+  padding-top: var(--spacer-3);
+}
+
+.cards .cards-card-body a.button {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  text-align: center;
+  background-color: var(--ds-color-primary);
+  color: var(--ds-button-color-primary-foreground);
 }
 
-/* chris */
+/* Light variant */
 .cards.light > ul > li {
-  background-color: #FBEAEB;
-  color: #2F3C7E;
-}
-.cards.light a.button:any-link {
-  background-color: #2F3C7E;
+  background: linear-gradient(135deg, #fef5f6 0%, #fff 100%);
+  border: 1px solid var(--ds-color-neutral-300);
 }
 
+.cards.light > ul > li h2,
+.cards.light > ul > li h3 {
+  color: var(--ds-color-primary);
+}
+
+/* Dark variant */
 .cards.dark > ul > li {
-  background-color: #101820;
-  color: white;
-}
-.cards.dark a.button:any-link {
-  background-color: #ca2909;
+  background: var(--ds-color-gradients-plum);
+  color: #fff;
 }
 
+.cards.dark > ul > li h2,
+.cards.dark > ul > li h3,
+.cards.dark > ul > li p {
+  color: #fff;
+}
+
+.cards.dark a.button {
+  background-color: #fff;
+  color: var(--ds-color-primary);
+}
+
+.cards.dark a.button:hover {
+  background-color: var(--ds-color-neutral-100);
+}
+
+/* Across variant - horizontal layout */
 .cards.across > ul {
-  display: block;
-} 
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-5);
+}
+
 .cards.across > ul > li {
   display: grid;
-  grid-gap: 10px;
-  grid: 'image body';
-  grid-template-columns: 320px auto;
-  margin-bottom: 50px;
-}
-.cards > ul > li img {
-  aspect-ratio: 1 / 1;
+  grid-template-columns: 320px 1fr;
+  gap: var(--spacer-5);
+  max-width: 100%;
 }
 
-.cards.across .cards-card-image { grid-area: image; }
-.cards.across .cards-card-body { grid-area: body; }
+.cards.across .cards-card-image {
+  height: 100%;
+  min-height: 240px;
+}
 
-@media (max-width: 600px) {
-  .cards > ul > li img {
-    aspect-ratio: 1 / 1;
+.cards.across .cards-card-body {
+  padding: var(--spacer-5);
+}
+
+@media (width <= 900px) {
+  .cards > ul {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacer-3);
   }
-  .cards.across  > ul > li {
-    display: block;
+
+  .cards.across > ul > li {
+    grid-template-columns: 1fr;
+  }
+
+  .cards.across .cards-card-image {
+    height: 220px;
+  }
+}
+
+@media (width <= 544px) {
+  .cards > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cards .cards-card-body {
+    padding: var(--spacer-3);
+  }
+
+  .cards .cards-card-body h2,
+  .cards .cards-card-body h3 {
+    font-size: var(--ds-typography-sizes-h-4-mobile-size);
+    line-height: var(--ds-typography-sizes-h-4-mobile-line-height);
+  }
+
+  .cards .cards-card-image {
+    height: 200px;
   }
 }
