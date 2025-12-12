@@ -261,7 +261,7 @@ main pre {
 
 /* Links */
 a:any-link {
-  color: var(--link-color);
+  color: #000;
   text-decoration: none;
   font-weight: 500;
   transition: all var(--animation-speed-fast) linear;
