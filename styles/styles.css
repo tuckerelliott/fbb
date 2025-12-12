@@ -213,6 +213,10 @@ h6 {
   font-weight: var(--ds-typography-sizes-h-6-font-weight);
 }
 
+.center {
+  text-align: center;
+}
+
 p,
 dl,
 ol,
