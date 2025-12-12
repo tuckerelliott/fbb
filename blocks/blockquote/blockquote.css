@@ -1,20 +1,32 @@
 blockquote {
-  background-color: #f8f9fa;
-  border-left: 10px solid #ccc;
+  background-color: #FFF;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 blockquote::before {
-  color: #ccc;
+  color: #869837;
   content: open-quote;
-  font-size: 4em;
+  font-size: 10em;
   line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+    width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-blockquote p {
+blockquote div {
   display: inline;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > main > div.section.blockquote-container > div > div > p > b > i > div {
+    width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }

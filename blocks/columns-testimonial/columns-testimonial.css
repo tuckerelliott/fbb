@@ -3,23 +3,25 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacer-5);
-  max-width: var(--ds-spacing-container-max-width);
+  max-width: 900px;
   margin: 0 auto;
-  padding: var(--spacer-6) var(--spacer-4);
-  background-color: #f8f8f8;
-  border-radius: var(--ds-border-radius);
-  border-left: 4px solid var(--ds-color-primary);
+  padding: var(--spacer-6) var(--spacer-5);
+  background: linear-gradient(180deg, #839538, #5d6b2c 60%);
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(118, 42, 91, 0.08);
+  position: relative;
 }
 
+
 .columns-testimonial img {
-  width: 100%;
-  border-radius: 50%;
-  max-width: 150px;
+  max-width: 1400px;
   height: auto;
-  aspect-ratio: 1;
   object-fit: cover;
   margin: 0 auto;
-  box-shadow: var(--ds-shadow);
+}
+
+.columns-testimonial > div:hover img {
+  transform: scale(1.05);
 }
 
 .columns-testimonial > div > div {
@@ -27,29 +29,53 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
+/* Testimonial quote text */
+.columns-testimonial > div > div p:first-of-type {
+  line-height: 1.75;
+  margin-bottom: var(--spacer-4);
+  color: #FFF;
+  font-size: 1.125rem;
+  font-style: italic;
+  position: relative;
+}
+
+/* Name/title styling */
 .columns-testimonial > div > div h2,
 .columns-testimonial > div > div h3 {
   margin-top: 0;
-  margin-bottom: var(--spacer-2);
-  color: var(--ds-color-text-heading);
-  font-size: var(--ds-typography-sizes-h-4-size);
-  line-height: var(--ds-typography-sizes-h-4-line-height);
+  margin-bottom: var(--spacer-1);
+  color: #FFF;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
 }
 
+/* Additional paragraphs (role, company, etc) */
 .columns-testimonial > div > div p {
   line-height: 1.6;
-  margin-bottom: var(--spacer-3);
-  color: var(--ds-color-text-body);
-  font-style: italic;
+  margin-bottom: var(--spacer-2);
+  color: #FFF;
 }
 
 .columns-testimonial > div > div p:last-of-type {
   font-style: normal;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--ds-color-text-muted);
   margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* Star rating support */
+.columns-testimonial .rating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: var(--spacer-3);
+  color: #f59e0b;
+  font-size: 1.25rem;
 }
 
 .columns-testimonial > div > div .button-container {
@@ -60,7 +86,8 @@
   order: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: var(--spacer-2);
 }
 
 .columns-testimonial > div > .columns-testimonial-img-col img {
@@ -69,39 +96,66 @@
 
 @media (width >= 900px) {
   .columns-testimonial > div {
-    align-items: center;
     flex-direction: row;
-    gap: var(--spacer-6);
-    padding: var(--spacer-6);
+    gap: var(--spacer-7);
+    padding-left: 0px;
+    padding-bottom: 0px;
+    align-items: center;
+  }
+
+  .columns-testimonial > div::before {
+    font-size: 120px;
+    top: var(--spacer-4);
+    left: var(--spacer-5);
   }
 
   .columns-testimonial > div > div {
-    flex: 3;
+    flex: 1;
     order: unset;
   }
 
   .columns-testimonial > div > .columns-testimonial-img-col {
-    flex: 1;
+    flex: 0 0 200px;
+    padding-top: 0;
+  }
+
+  .columns-testimonial > div > div p:first-of-type {
+    font-size: 1.25rem;
+  }
+}
+
+@media (width <= 900px) and (width > 544px) {
+  .columns-testimonial > div {
+    padding: var(--spacer-5) var(--spacer-4);
   }
 
   .columns-testimonial img {
-    max-width: 180px;
+    max-width: 130px;
   }
 }
 
 @media (width <= 544px) {
   .columns-testimonial > div {
     gap: var(--spacer-4);
-    padding: var(--spacer-4) var(--spacer-3);
+    padding: var(--spacer-5) var(--spacer-3);
+  }
+
+  .columns-testimonial > div::before {
+    font-size: 60px;
+    top: var(--spacer-2);
+    left: var(--spacer-2);
   }
 
   .columns-testimonial > div > div h2,
   .columns-testimonial > div > div h3 {
-    font-size: var(--ds-typography-sizes-h-4-mobile-size);
-    line-height: var(--ds-typography-sizes-h-4-mobile-line-height);
+    font-size: 1.125rem;
+  }
+
+  .columns-testimonial > div > div p:first-of-type {
+    font-size: 1rem;
   }
 
   .columns-testimonial img {
-    max-width: 120px;
+    max-width: 110px;
   }
 }

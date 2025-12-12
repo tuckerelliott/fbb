@@ -132,7 +132,7 @@
   --heading-font-size-xs: var(--ds-typography-sizes-h-6-size);
 
   /* Nav height */
-  --nav-height: 64px;
+  --nav-height: 105px;
 }
 
 @media (width <= 544px) {
